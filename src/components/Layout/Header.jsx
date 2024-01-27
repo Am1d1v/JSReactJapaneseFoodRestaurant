@@ -1,4 +1,6 @@
 import styles from './Header.module.css'
+import sushiImage from '../../assets/sushi.jpg'
+
 
 function Header(props) {
 
@@ -10,8 +12,8 @@ function Header(props) {
         <h1>Seafood Restaurant</h1>
         <button>Корзина</button>
       </header>
-      <div>
-        <img src="" alt="" />
+      <div className={styles['main-image']}>
+        <img src={sushiImage} alt="SushiImage" />
       </div>
     </>
   )
