@@ -1,5 +1,5 @@
 import styles from './MealItem.module.css';
-
+import MealItemForm from './MealItemForm';
 
 function MealItem({name, description, price}) {
 
@@ -18,7 +18,7 @@ function MealItem({name, description, price}) {
             </div>
         </div>
         <div>
-
+            <MealItemForm />
         </div>
     </li>
   )

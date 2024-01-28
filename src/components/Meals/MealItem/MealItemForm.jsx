@@ -2,9 +2,12 @@ import styles from './MealItemForm.module.css'
 
 
 
-function MealItemForm() {
+function MealItemForm(props) {
   return (
-    <div>MealItemForm</div>
+    <form action="" className={styles.form}>
+      <input type="text" />
+      <button>Добавить</button>
+    </form>
   )
 }
 
