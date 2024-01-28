@@ -5,7 +5,7 @@ function MealItem({name, description, price}) {
 
 
   return (
-    <li>
+    <li className={styles.meal}>
         <div>
             <h3>
                 {name}
@@ -13,8 +13,8 @@ function MealItem({name, description, price}) {
             <div>
                 {description}
             </div>
-            <div>
-                {`${price}$`}
+            <div className={styles.price}>
+                {`${price} $`}
             </div>
         </div>
         <div>
