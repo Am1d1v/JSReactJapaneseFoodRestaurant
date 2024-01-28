@@ -1,5 +1,6 @@
 import styles from './MealList.module.css';
 import Card from '../UI/Card';
+import MealItem from './MealItem/MealItem';
 
 
 // Temporary Array of Meals
@@ -35,7 +36,7 @@ function MealList(props) {
 
   // Cover every meal element in li
   const mealList = DUMMY_MEALS.map((meal) => {
-    return <li>{meal.name}</li>
+    return <MealItem name={meal.name} description={meal.description} price={meal.price} />
   })
 
   return (
