@@ -1,4 +1,6 @@
-import styles from './MealList.module.css'
+import styles from './MealList.module.css';
+import Card from '../UI/Card';
+
 
 // Temporary Array of Meals
 const DUMMY_MEALS = [
@@ -38,9 +40,12 @@ function MealList(props) {
 
   return (
     <section className={styles.meals}>
-      <ul>
-        {mealList}
-      </ul>
+      <Card>
+        <ul>
+          {mealList}
+        </ul>
+      </Card>
+     
     </section>
   )
 }

@@ -4,6 +4,8 @@
     max-width: 50rem;
     width: 90%;
     margin: 1rem auto;
+    font-size: 20px;
+    font-weight: 500;
     animation: meals-appear 1s;
 }
 
