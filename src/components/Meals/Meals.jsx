@@ -1,8 +1,13 @@
-import React from 'react'
+import MealList from "./MealList";
+import PromoText from './PromoText';
+
 
 function Meals() {
   return (
-    <div>Meals</div>
+    <>
+      <PromoText />
+      <MealList />
+    </>
   )
 }
 

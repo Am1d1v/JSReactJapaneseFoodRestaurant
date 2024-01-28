@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+
+main {
+  transform: translateY(-100px);
 }
 
 
