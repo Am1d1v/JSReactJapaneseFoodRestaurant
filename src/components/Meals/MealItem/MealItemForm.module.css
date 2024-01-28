@@ -13,7 +13,8 @@
     background-color: #6b069a;
     border: 1px solid #6b069a;
     color: #fff;
-    padding: 0.25rem 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 20px;
     border-radius: 20px;
     font-weight: bold;
 }

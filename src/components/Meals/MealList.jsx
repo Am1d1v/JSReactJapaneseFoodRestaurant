@@ -36,7 +36,7 @@ function MealList(props) {
 
   // Cover every meal element in li
   const mealList = DUMMY_MEALS.map((meal, index) => {
-    return <MealItem name={meal.name} description={meal.description} price={meal.price} key={index}/>
+    return <MealItem name={meal.name} description={meal.description} price={meal.price} key={index} id={index}/>
   })
 
   return (
