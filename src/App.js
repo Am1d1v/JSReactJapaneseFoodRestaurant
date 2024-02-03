@@ -16,15 +16,15 @@ function App() {
   }
 
   // Hide Cart
-  const HideCartHandler = () => {
+  const hideCartHandler = () => {
     serCartIsVisible(false);
   }
 
   
   return (
     <>
-      <Cart />
-      <Header />
+      {cartIsVisible && <Cart />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
