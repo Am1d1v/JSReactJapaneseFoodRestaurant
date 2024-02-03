@@ -2,23 +2,23 @@ import styles from './Cart.module.css'
 import Modal from '../UI/Modal';
 
 
-function Cart({id}) {
+function Cart({id, onHideCart}) {
 
     const cartItems = <ul className={styles['cart-items']}>
         {[{id}].map((item) => {
-            <li>{item.name}</li>
+           return <li>{item.name}</li>
         })}
     </ul>;
 
   return (
-    <Modal>
+    <Modal onHideCart={onHideCart}>
         {cartItems}
         <div className={styles.total}>
             <span>Итого</span>
             <span>30.99</span>
         </div>
         <div className={styles.buttonsContainer}>
-            <button>Закрыть</button>
+            <button onClick={onHideCart}>Закрыть</button>
             <button>Заказать</button>
         </div>
     </Modal>
