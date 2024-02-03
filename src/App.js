@@ -15,7 +15,12 @@ function App() {
     serCartIsVisible(true);
   }
 
+  // Hide Cart
+  const HideCartHandler = () => {
+    serCartIsVisible(false);
+  }
 
+  
   return (
     <>
       <Cart />
