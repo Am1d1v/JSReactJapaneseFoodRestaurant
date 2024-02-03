@@ -17,7 +17,7 @@ function Cart({id}) {
             <span>Итого</span>
             <span>30.99</span>
         </div>
-        <div>
+        <div className={styles.buttonsContainer}>
             <button>Закрыть</button>
             <button>Заказать</button>
         </div>
