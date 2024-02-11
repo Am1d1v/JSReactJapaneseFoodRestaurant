@@ -1,9 +1,17 @@
-import CartIcon from '../Cart/CartIcon'
 import styles from './HeaderCartButton.module.css'
-
+import CartIcon from '../Cart/CartIcon'
+import { useContext } from 'react';
+import CartContext from '../store/cart-context';
 
 function HeaderCartButton({onClick}) {
 
+  //Cart Context
+  const cartContext = useContext(CartContext);
+
+  // Quantity of Items in the Cart
+  const numberOfCartItems = cartContext.items.reduce((currentValue, item) => {
+    return currentValue + item.amount
+  }, 0);
 
   return (
     <button className={styles.button} onClick={onClick}>
@@ -12,7 +20,7 @@ function HeaderCartButton({onClick}) {
         </span>
         <span>Корзина</span>
         <span className={styles.badge}>
-            1
+            {numberOfCartItems}
         </span>
     </button>
   )

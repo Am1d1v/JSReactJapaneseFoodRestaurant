@@ -1,5 +1,5 @@
 import CartContext from "./cart-context"
-import Cart from "../Cart/Cart"
+
 
 function CartContextProvider(props) {
 
