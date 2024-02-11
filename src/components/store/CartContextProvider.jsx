@@ -12,7 +12,13 @@ const cartReducer = (state, action) => {
 
     // Add item to the cart
     if(action.type === 'ADD_ITEM'){
+        const updatedItems = state.items.concat(action.item);
+        const updatedTotalAmount =  state.totalAmount + action.item.price * action.item.amount
 
+        return {
+            items: updatedItems,
+            totalAmount: updatedTotalAmount
+        }
     }
 
     return defaultCartState;
@@ -32,7 +38,10 @@ function CartContextProvider(props) {
 
     // Remove item from the cart
     const removeItemHandler = (id) => {
-
+        dispatchCartAction({
+            type: 'REMOVE_ITEM',
+            id: id
+        });
     }
 
     // Cart State
