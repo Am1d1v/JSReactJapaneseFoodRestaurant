@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
 import Cart from './components/Cart/Cart';
-
+import CartContextProvider from './components/store/CartContextProvider';
 
 function App() {
 
@@ -23,11 +23,13 @@ function App() {
   
   return (
     <>
-      {cartIsVisible && <Cart onHideCart={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
-      <main>
-        <Meals />
-      </main>
+      <CartContextProvider>
+        {cartIsVisible && <Cart onHideCart={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
+        <main>
+          <Meals />
+        </main>
+      </CartContextProvider>
     </>
   );
 }
